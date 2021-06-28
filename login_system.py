@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-masters_credentials = "/home/sept/projects/python/passwordmanager/masters_credentials.txt"
-users_credentials = "/home/sept/projects/python/passwordmanager/users_credentials.txt"
-commands_information = "/home/sept/projects/python/passwordmanager/commands_information.txt"
+masters_credentials = "/YOUR PATH/masters_credentials.txt"
+users_credentials = "/YOUR PATH/users_credentials.txt"
+commands_information = "YOUR PATH/commands_information.txt"
 def get_existing_masters():
     """
     This command splits the stored masters data into username ansd password.
@@ -187,9 +187,7 @@ def get_table_users():
 def get_user_repeat_pass():
     """
     With this function the master would check if a password has been used more than once for the same title. 
-    All passwords are compared between them. 
-    If passwords are the same. The output will be like: 
-    Follow titles {title_with_the same_password} have the same password: {password}
+    All passwords are compared between them.
     """ 
     with open(users_credentials, "r") as f:
         next(f)
@@ -264,7 +262,7 @@ def change_username_user(username_user_old, title_user, password, username_user_
 
 def append_new_line(file_name, text_to_append):
     """
-    a a line to a file with a specific text.
+   
 
     Input:
     file_name: path file (string)
